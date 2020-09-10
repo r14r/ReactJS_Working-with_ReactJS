@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": true,
+  "files.exclude": {
+      ".env.d": true,
+      "**/.env.d": true,
+      "node_modules": true,
+      "**/node_modules": true
+  }
+}

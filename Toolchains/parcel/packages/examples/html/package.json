@@ -1,0 +1,23 @@
+{
+  "name": "@parcel/html-example",
+  "version": "2.0.0-beta.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "demo": "parcel build src/index.html"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not edge < 76",
+    "not firefox < 67"
+  ],
+  "devDependencies": {
+    "@parcel/babel-register": "2.0.0-beta.1",
+    "parcel": "2.0.0-beta.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}

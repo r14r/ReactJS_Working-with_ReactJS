@@ -1,0 +1,37 @@
+{
+  "name": "neutrino",
+  "version": "9.4.0",
+  "description": "Create and build JS applications with managed configurations",
+  "main": "index.js",
+  "bin": {
+    "neutrino": "bin/neutrino.js"
+  },
+  "keywords": [
+    "neutrino",
+    "webpack",
+    "babel"
+  ],
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neutrinojs/neutrino.git",
+    "directory": "packages/neutrino"
+  },
+  "homepage": "https://neutrinojs.org",
+  "bugs": "https://github.com/neutrinojs/neutrino/issues",
+  "scripts": {
+    "test": "ava test"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "semver": "^7.3.2",
+    "webpack-chain": "^6.5.1",
+    "yargs-parser": "^19.0.4"
+  }
+}

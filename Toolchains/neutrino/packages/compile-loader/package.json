@@ -1,0 +1,37 @@
+{
+  "name": "@neutrinojs/compile-loader",
+  "version": "9.4.0",
+  "description": "Neutrino middleware for compiling JavaScript using Babel configuration",
+  "main": "index.js",
+  "keywords": [
+    "neutrino",
+    "neutrino-middleware",
+    "compile",
+    "babel"
+  ],
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neutrinojs/neutrino.git",
+    "directory": "packages/compile-loader"
+  },
+  "homepage": "https://neutrinojs.org",
+  "bugs": "https://github.com/neutrinojs/neutrino/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-loader": "^8.1.0"
+  },
+  "peerDependencies": {
+    "neutrino": "^9.0.0",
+    "webpack": "^4.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "9.4.0",
+  "npmClient": "yarn",
+  "registry": "https://registry.npmjs.org/",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "exact": true,
+      "forcePublish": "*",
+      "gitRemote": "upstream",
+      "gitTagVersion": false,
+      "push": false
+    },
+    "publish": {
+      "exact": true,
+      "forcePublish": "*",
+      "gitRemote": "upstream",
+      "gitTagVersion": false,
+      "push": false
+    }
+  },
+  "packages": ["packages/*"]
+}

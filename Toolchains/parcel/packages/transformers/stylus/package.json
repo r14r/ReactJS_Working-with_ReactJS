@@ -1,0 +1,29 @@
+{
+  "name": "@parcel/transformer-stylus",
+  "version": "2.0.0-beta.1",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parcel-bundler/parcel.git"
+  },
+  "main": "lib/StylusTransformer.js",
+  "source": "src/StylusTransformer.js",
+  "engines": {
+    "node": ">= 10.0.0",
+    "parcel": "^2.0.0-alpha.1.1"
+  },
+  "dependencies": {
+    "@parcel/plugin": "2.0.0-beta.1",
+    "@parcel/utils": "2.0.0-beta.1"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  }
+}

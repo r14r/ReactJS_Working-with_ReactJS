@@ -1,0 +1,44 @@
+{
+  "name": "@neutrinojs/standardjs",
+  "version": "9.4.0",
+  "description": "Neutrino preset for linting projects using the StandardJS ESLint config",
+  "main": "index.js",
+  "keywords": [
+    "neutrino",
+    "neutrino-preset",
+    "standardjs",
+    "standard",
+    "eslint"
+  ],
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neutrinojs/neutrino.git",
+    "directory": "packages/standardjs"
+  },
+  "homepage": "https://neutrinojs.org",
+  "bugs": "https://github.com/neutrinojs/neutrino/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
+  "dependencies": {
+    "@neutrinojs/eslint": "9.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^6.0.0 || ^7.0.0",
+    "neutrino": "^9.0.0"
+  }
+}

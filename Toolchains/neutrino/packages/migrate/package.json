@@ -1,0 +1,37 @@
+{
+  "name": "@neutrinojs/migrate",
+  "version": "9.4.0",
+  "description": "Migrate Neutrino projects to the latest version via codemods",
+  "bin": {
+    "migrate": "./bin/migrate.js"
+  },
+  "files": [
+    "bin",
+    "transforms"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neutrinojs/neutrino.git",
+    "directory": "packages/migrate"
+  },
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MPL-2.0",
+  "keywords": [
+    "neutrino",
+    "migrate",
+    "codemod"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
+  "dependencies": {
+    "camelcase": "^6.0.0",
+    "jscodeshift": "^0.10.0",
+    "yargs": "^15.4.1"
+  }
+}

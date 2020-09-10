@@ -1,0 +1,100 @@
+// @flow
+
+// (Only covers the API that Parcel uses)
+// Derived from the PostCSS docs available at
+// http://api.postcss.org/postcss.html.
+
+// eslint-disable-next-line import/no-extraneous-dependencies
+import typeof {SourceMapGenerator} from 'source-map';
+
+declare module 'postcss' {
+  declare type NodeCallback = (Node, number) => false | void;
+
+  declare interface Node {
+    parent: Container;
+    type: 'atrule' | 'comment' | 'decl' | 'root' | 'rule';
+  }
+
+  declare interface Container extends Node {
+    each(callback: NodeCallback): false | void;
+    nodes: Array<Node>;
+    walk(callback: NodeCallback): false | void;
+  }
+
+  declare interface Root extends Container {}
+
+  declare class Processor {
+    process(
+      css: string | Result | Root,
+      opts?: ProcessOptions,
+    ): Promise<Result>;
+  }
+
+  declare type ProcessOptions = $Shape<{|
+    from: string,
+    to: string,
+    map: MapOptions,
+    parser: parser,
+    stringifier: stringifier,
+    syntax: {|
+      parser: parser,
+      stringifier: stringifier,
+    |},
+  |}>;
+
+  declare type MapOptions = {|
+    inline?: boolean,
+    prev?: string | any | false | function,
+    sourcesContent?: boolean,
+    annotation?: false | string,
+    from?: string,
+  |};
+
+  declare type Parser = (
+    css: string,
+    optsopt: {|from?: string, map?: MapOptions|},
+  ) => Root;
+
+  declare type Plugin = {|
+    postcss(...args: Array<any>): void,
+  |};
+
+  declare type pluginFunction = (root: Root, result: Result) => void;
+
+  declare type Result = {
+    content: string,
+    css: string,
+    map: SourceMapGenerator,
+    messages: Array<Message>,
+    opts: processOptions,
+    processor: Processor,
+    root: Root,
+    toString(): string,
+    ...
+  };
+
+  declare type Message = {|
+    type: string,
+    plugin: string,
+  |};
+
+  declare type Builder = (
+    part: string,
+    node: Root,
+    typeopt?: 'start' | 'end',
+  ) => void;
+
+  declare type Stringifier = (root: Root, builder: Builder) => void;
+
+  declare module.exports: {
+    (plugins?: Array<Plugin | PluginFunction> | Processor): Processor,
+    parse: Parser,
+    stringify: Stringifier,
+    root: ($Shape<Node>) => Root,
+    atRule: ($Shape<Node>) => Container,
+    comment: ($Shape<Node>) => Node,
+    decl: ($Shape<Node>) => Node,
+    rule: ($Shape<Node>) => Container,
+    ...
+  };
+}

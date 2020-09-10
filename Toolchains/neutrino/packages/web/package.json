@@ -1,0 +1,50 @@
+{
+  "name": "@neutrinojs/web",
+  "version": "9.4.0",
+  "description": "Neutrino preset for building generic web applications",
+  "main": "index.js",
+  "keywords": [
+    "neutrino",
+    "neutrino-preset",
+    "web",
+    "hot module reload"
+  ],
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neutrinojs/neutrino.git",
+    "directory": "packages/web"
+  },
+  "homepage": "https://neutrinojs.org",
+  "bugs": "https://github.com/neutrinojs/neutrino/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5.4.0",
+    "yarn": ">=1.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "@neutrinojs/clean": "9.4.0",
+    "@neutrinojs/compile-loader": "9.4.0",
+    "@neutrinojs/dev-server": "9.4.0",
+    "@neutrinojs/font-loader": "9.4.0",
+    "@neutrinojs/html-loader": "9.4.0",
+    "@neutrinojs/html-template": "9.4.0",
+    "@neutrinojs/image-loader": "9.4.0",
+    "@neutrinojs/style-loader": "9.4.0",
+    "babel-merge": "^3.0.0",
+    "deepmerge": "^1.5.2"
+  },
+  "peerDependencies": {
+    "neutrino": "^9.0.0",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.0.0",
+    "webpack-dev-server": "^3.0.0"
+  }
+}
